@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.workers.mike-tusa.hrefgate/hrefgate",
+  "title": "HrefGate",
+  "description": "Lint hreflang: codes, x-default, self-reference, canonical, return links. Never fetches URLs.",
+  "version": "0.1.2",
+  "websiteUrl": "https://hrefgate.mike-tusa.workers.dev/",
+  "icons": [{ "src": "https://hrefgate.mike-tusa.workers.dev/favicon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }],
+  "remotes": [{ "type": "streamable-http", "url": "https://hrefgate.mike-tusa.workers.dev/mcp" }]
+}

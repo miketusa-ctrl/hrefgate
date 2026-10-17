@@ -1,0 +1,15 @@
+{
+  "name": "hrefgate",
+  "version": "0.1.2",
+  "private": true,
+  "description": "Free hreflang linter: paste tool, JSON API and remote MCP server. Never fetches URLs.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
