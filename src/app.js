@@ -34,7 +34,7 @@ export function limitsFor(env = {}) {
   };
 }
 
-export function ipBucket(ip) { // IPv4 as is; IPv6 → its /64. Same output as workdayapi's (agent-ready recipe §1).
+export function ipBucket(ip) { // IPv4 as is; IPv6 → its /64. Same output as workdayapi's.
   const s = String(ip || 'unknown').trim().toLowerCase();
   if (!s.includes(':')) return s;
   if (s.includes('.')) return s.slice(s.lastIndexOf(':') + 1);
@@ -58,7 +58,7 @@ const json = (body, status = 200, headers = {}) => new Response(JSON.stringify(b
 });
 export const apiError = (status, code, message, headers = {}) => json({ error: { code, message } }, status, headers);
 
-/** No API keys in v0.1: everyone is anonymous. Kept as a function so /api and /mcp share one gate (recipe §1). */
+/** No API keys in v0.1: everyone is anonymous. Kept as a function so /api and /mcp share one gate. */
 export async function authenticate() { return { ok: true, tier: 'anonymous' }; }
 
 /** Shared by POST /api/lint and MCP tools/call: per-minute limiter → daily pool → validate. */
