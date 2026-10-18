@@ -1,7 +1,7 @@
 import { TOOLS, SUPPORTED_VERSIONS, DISCOVERY_PER_MIN, MAX_BODY_BYTES, SERVER_INFO, instructions } from './mcp.js';
 import { VERSION, MAX_NESTING } from './validate.js';
 
-// Glama connector ownership claim, served at /.well-known/glama.json. Replace the placeholder with your own claim token from glama.ai.
+// Glama connector ownership claim, served at /.well-known/glama.json. Set your own glama.ai claim token as the GLAMA_CLAIM Worker secret (or replace the placeholder, if present).
 export const GLAMA_CLAIM = '<GLAMA_CLAIM_TOKEN>';
 export const glamaJson = () => JSON.stringify({ $schema: 'https://glama.ai/mcp/schemas/connector.json', claim: GLAMA_CLAIM });
 export const CONTACT = 'digitalpromohub.support@gmail.com';
