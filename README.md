@@ -12,7 +12,7 @@ Lint hreflang: codes, x-default, self-reference, canonical, return links. Never 
 
 HrefGate is a remote MCP server (Streamable HTTP) at `https://hrefgate.mike-tusa.workers.dev/mcp`. Tools: `lint_hreflang`.
 
-Most MCP clients (Claude Desktop, Cursor, Cline, Windsurf) accept this config:
+Cursor, Cline and Windsurf accept this config:
 
 ```json
 {
@@ -25,7 +25,9 @@ Most MCP clients (Claude Desktop, Cursor, Cline, Windsurf) accept this config:
 }
 ```
 
-Clients that only support stdio can bridge with `npx mcp-remote https://hrefgate.mike-tusa.workers.dev/mcp`. VS Code uses a `servers` key instead of `mcpServers`.
+Claude Desktop: open Settings > Connectors, choose "Add custom connector" and paste `https://hrefgate.mike-tusa.workers.dev/mcp`. Or, for clients that only support local (stdio) servers, use the mcp-remote bridge: `npx mcp-remote https://hrefgate.mike-tusa.workers.dev/mcp`.
+
+VS Code uses a `servers` key instead of `mcpServers`.
 
 The `server.json` file is the [MCP Registry](https://registry.modelcontextprotocol.io) manifest for this server.
 
